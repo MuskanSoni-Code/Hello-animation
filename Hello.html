@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: blueviolet;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    span {
+        position: relative;
+        top: 20px;
+        color: white;
+        display: inline-block;
+        font-size: 5rem;
+        text-shadow: 0 1px 0 ghostwhite, 0 2px 0 ghostwhite, 0 3px 0 ghostwhite,
+            6px 0 transparent, 0 10px 10px black;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+
+
+        animation: "ease": ".25,.1,.25,1", "linear":"0,0,1,1", "ease-in":".42,0,1,1", "ease-out":"0,0,.58,1", "ease-in-out":".42,0,.58,1"
+
+
+    }
+
+    #a {
+        animation-delay: 0.1s;
+    }
+
+    #b {
+        animation-delay: 0.2s;
+    }
+
+    #c {
+        animation-delay: 0.3s;
+    }
+
+    #d {
+        animation-delay: 0.4s;
+    }
+
+    #e {
+        animation-delay: 0.5s;
+    }
+
+    #f {
+        animation-delay: 0.6s;
+    }
+
+    @keyframes bounces {
+
+        /* 0%,
+        100% {
+            transform: translateY(0px)
+        }
+        50% {
+            transform: translateY(50px)
+        } */
+        100% {
+            top: -20px;
+            text-shadow: 5px 5px 2px grey;
+        }
+
+            {
+            animation:
+                "ease": ".25,.1,.25,1", "linear":"0,0,1,1", "ease-in":".42,0,1,1", "ease-out":"0,0,.58,1", "ease-in-out":".42,0,.58,1"
+        }
+    }
+</style>
+
+<body>
+    <h1>
+        <span id="a">H</span>
+        <span id="b">E</span>
+        <span id="c">L</span>
+        <span id="d">L</span>
+        <span id="e">O</span>
+        <span id="f">!</span>
+    </h1>
+</body>
+
+</html>
